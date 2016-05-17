@@ -1,0 +1,8 @@
+h1 My Todos
+
+div.my-list.text-centered
+	ul.list-group
+	- @todos.each do |t|
+		li.list-group-item = link_to t.title, "/todos/#{t.id}"
+
+= link_to 'New Todo', '/todos/new'
